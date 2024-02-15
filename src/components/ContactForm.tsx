@@ -1,10 +1,11 @@
 "use client";
 
+import { SendEmailDto } from "@/types/send-email.dto";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Button, Input, Textarea } from "@nextui-org/react";
-import { useRouter } from "next/navigation";
 import { SubmitHandler, useForm } from "react-hook-form";
 import { z } from "zod";
+import * as actions from "@/actions";
 
 const sendEmailSchema = z.object({
   email: z.string().email({ message: "Insira um e-mail válido" }),
@@ -26,6 +27,13 @@ export default function ContactForm() {
 
   const onSubmit: SubmitHandler<SendEmailFormFields> = async (data) => {
     try {
+      const email: SendEmailDto = {
+        from: data.email,
+        subject: data.subject,
+        text: data.message,
+      };
+
+      await actions.sendEmail(email);
     } catch (error) {
       setError("root", { message: "Falha ao enviar e-mail!" });
     }
