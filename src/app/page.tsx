@@ -29,7 +29,9 @@ const stackItems: Stack[] = [
   { name: ".NET Core" },
   { name: "Docker" },
   { name: "C/C++" },
-  { name: "SQL" },
+  { name: "MySQL" },
+  { name: "Postgres" },
+  { name: "SQL Server" },
   { name: "Git" },
 ];
 
@@ -40,11 +42,13 @@ export default async function Home() {
       <Hero />
       <About />
 
-      {experiencesList.map((job, index) => {
-        return <SingleExperience key={index} job={job} />;
-      })}
+      <div id="experience">
+        {experiencesList.map((job, index) => {
+          return <SingleExperience key={index} job={job} />;
+        })}
+        <ExperienceDetails stackItems={stackItems} />
+      </div>
 
-      <ExperienceDetails stackItems={stackItems} />
       <WorkGrid />
       <Contact />
       <WhatsAppButton />

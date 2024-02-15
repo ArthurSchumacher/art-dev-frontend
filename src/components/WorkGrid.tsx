@@ -101,7 +101,7 @@ export default function WorkGrid() {
   ));
 
   return (
-    <section>
+    <section id="work">
       <div className="px-5 py-10 mx-auto bg-content4">
         <div className="flex flex-col text-center w-full mb-10">
           <h1 className="sm:text-3xl text-2xl font-medium text-content1">
