@@ -26,7 +26,7 @@ export default function Hero() {
     return (
       <section className="bg-gradient-to-br from-content3 to-content4">
         <div className="flex px-5 md:flex-row flex-col items-center justify-center h-dvh gap-10">
-          <div className="lg:flex-grow max-w-screen-md md:w-1/2 flex flex-col md:items-start md:text-left items-center text-center">
+          <div className="lg:flex-grow max-w-screen-md md:w-1/2 flex flex-col md:items-start md:text-left items-center text-center sm:pb-0 pb-12">
             <TypeAnimation
               sequence={[
                 (el) => el?.classList.add(CURSOR_CLASS_NAME),
@@ -109,7 +109,7 @@ export default function Hero() {
               </Button>
             </div>
           </div>
-          <div className="overflow-hidden lg:max-w-lg lg:w-full md:w-1/2 w-3/4 order-first xl:order-last lg:order-last md:order-last">
+          <div className="overflow-hidden lg:max-w-lg lg:w-full md:w-1/2 w-3/4 order-first xl:order-last lg:order-last md:order-last sm:pb-0 pb-4">
             <div className="bg-content3 border-4 border-content4 rounded-full shadow-md">
               <Image
                 src={
