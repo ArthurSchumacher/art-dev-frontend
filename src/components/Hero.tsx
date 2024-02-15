@@ -101,12 +101,12 @@ export default function Hero({ theme }: HeroProps) {
           </div>
         </div>
         <div className="overflow-hidden lg:max-w-lg lg:w-full md:w-1/2 w-3/4 order-first xl:order-last lg:order-last md:order-last py-10">
-          <div className="active bg-content3 border-4 border-content4 rounded-full shadow-md">
-            <Suspense
-              fallback={
-                <Skeleton className="w-full h-full object-cover rounded-full" />
-              }
-            >
+          <Suspense
+            fallback={
+              <Skeleton className="w-full h-full bg-content3 border-4 border-content4 rounded-full shadow-md" />
+            }
+          >
+            <div className="bg-content3 border-4 border-content4 rounded-full shadow-md">
               <Image
                 src={
                   theme === "light" ? "/lightmode-me.gif" : "darkmode-me.gif"
@@ -116,8 +116,8 @@ export default function Hero({ theme }: HeroProps) {
                 alt="Memoji"
                 className="object-cover rounded-full"
               />
-            </Suspense>
-          </div>
+            </div>
+          </Suspense>
         </div>
       </div>
     </section>
