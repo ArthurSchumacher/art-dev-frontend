@@ -26,67 +26,65 @@ export default function Hero() {
     return (
       <section className="bg-gradient-to-br from-content3 to-content4">
         <div className="flex px-5 md:flex-row flex-col items-center justify-center h-dvh">
-          <div className="lg:flex-grow max-w-screen-md md:w-1/2 lg:pr-16 flex flex-col md:items-start md:text-left items-center text-center sm:pb-0 pb-28">
-            <div className="block h-56 max-w-sm">
-              <TypeAnimation
-                sequence={[
-                  (el) => el?.classList.add(CURSOR_CLASS_NAME),
-                  "Oi meu nome é",
-                  (el) => el?.classList.remove(CURSOR_CLASS_NAME),
-                ]}
-                wrapper="p"
-                cursor={false}
-                className="sm:text-base text-light text-content2"
-              />
-              <TypeAnimation
-                sequence={[
-                  1500,
-                  (el) => el?.classList.add(CURSOR_CLASS_NAME),
-                  1000,
-                  "Arthur Schumacher",
-                  (el) => el?.classList.remove(CURSOR_CLASS_NAME),
-                ]}
-                wrapper="h1"
-                cursor={false}
-                className="sm:text-2xl text-3xl font-medium text-content1"
-              />
-              <TypeAnimation
-                sequence={[
-                  4000,
-                  (el) => el?.classList.add(CURSOR_CLASS_NAME),
-                  1000,
-                  "Eu construo coisas para a internet.",
-                  (el) => el?.classList.remove(CURSOR_CLASS_NAME),
-                  15000,
-                  (el) => el?.classList.add(CURSOR_CLASS_NAME),
-                  1000,
-                  "Eu construo sites para a internet.",
-                  (el) => el?.classList.remove(CURSOR_CLASS_NAME),
-                  15000,
-                  (el) => el?.classList.add(CURSOR_CLASS_NAME),
-                  1000,
-                  "Eu construo sistemas para a internet.",
-                  (el) => el?.classList.remove(CURSOR_CLASS_NAME),
-                ]}
-                wrapper="h1"
-                cursor={false}
-                repeat={Infinity}
-                className="mb-4 font-normal text-content2"
-              />
-              <TypeAnimation
-                sequence={[
-                  7500,
-                  (el) => el?.classList.add(CURSOR_CLASS_NAME),
-                  1000,
-                  "Eu sou um engenheiro de software especializado em criar a melhor solução para digitalizar o seu trabalho.", // Types 'One'
-                  (el) => el?.classList.remove(CURSOR_CLASS_NAME),
-                ]}
-                wrapper="h1"
-                cursor={false}
-                className="leading-relaxed text-justify text-content2"
-              />
-            </div>
-            <div className="flex justify-center gap-2">
+          <div className="lg:flex-grow max-w-screen-md md:w-1/2 lg:pr-16 sm:pr-10 flex flex-col md:items-start md:text-left items-center text-center sm:pb-0 pb-28">
+            <TypeAnimation
+              sequence={[
+                (el) => el?.classList.add(CURSOR_CLASS_NAME),
+                "Oi meu nome é",
+                (el) => el?.classList.remove(CURSOR_CLASS_NAME),
+              ]}
+              wrapper="p"
+              cursor={false}
+              className="sm:text-base text-light text-content2"
+            />
+            <TypeAnimation
+              sequence={[
+                1500,
+                (el) => el?.classList.add(CURSOR_CLASS_NAME),
+                1000,
+                "Arthur Schumacher",
+                (el) => el?.classList.remove(CURSOR_CLASS_NAME),
+              ]}
+              wrapper="h1"
+              cursor={false}
+              className="sm:text-2xl text-3xl font-medium text-content1"
+            />
+            <TypeAnimation
+              sequence={[
+                4000,
+                (el) => el?.classList.add(CURSOR_CLASS_NAME),
+                1000,
+                "Eu construo coisas para a internet.",
+                (el) => el?.classList.remove(CURSOR_CLASS_NAME),
+                15000,
+                (el) => el?.classList.add(CURSOR_CLASS_NAME),
+                1000,
+                "Eu construo sites para a internet.",
+                (el) => el?.classList.remove(CURSOR_CLASS_NAME),
+                15000,
+                (el) => el?.classList.add(CURSOR_CLASS_NAME),
+                1000,
+                "Eu construo sistemas para a internet.",
+                (el) => el?.classList.remove(CURSOR_CLASS_NAME),
+              ]}
+              wrapper="h1"
+              cursor={false}
+              repeat={Infinity}
+              className="mb-4 font-normal text-content2"
+            />
+            <TypeAnimation
+              sequence={[
+                7500,
+                (el) => el?.classList.add(CURSOR_CLASS_NAME),
+                1000,
+                "Eu sou um engenheiro de software especializado em criar a melhor solução para digitalizar o seu trabalho.", // Types 'One'
+                (el) => el?.classList.remove(CURSOR_CLASS_NAME),
+              ]}
+              wrapper="h1"
+              cursor={false}
+              className="leading-relaxed text-justify text-content2"
+            />
+            <div className="flex justify-center gap-2 mt-4">
               <Button
                 href="#contact"
                 size="lg"
