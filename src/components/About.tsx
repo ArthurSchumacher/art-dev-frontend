@@ -3,7 +3,7 @@ import { Button, Link } from "@nextui-org/react";
 export default function About() {
   return (
     <section id="about" className="px-5 py-10 mx-auto bg-content3">
-      <div className="flex flex-col text-center w-full max-w-screen-md mx-auto">
+      <div className="flex flex-col text-center w-full md:max-w-screen-xl max-w-screen-md mx-auto">
         <h2 className="text-xs text-primary tracking-widest font-medium title-font mb-1 uppercase">
           software engineer
         </h2>

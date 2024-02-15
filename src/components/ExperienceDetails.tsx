@@ -22,8 +22,7 @@ export default function ExperienceDetails({
             companheiros, além disso sou extremamente eficiente no meu trabalho.
           </p>
           <Link
-            href="http://art-schumacher.infinityfreeapp.com/cvpdf"
-            target="_blank"
+            href="http://art-dev-backend-production.up.railway.app/cv"
             className="text-primary inline-flex items-center mt-4"
           >
             Curriculum vitæ

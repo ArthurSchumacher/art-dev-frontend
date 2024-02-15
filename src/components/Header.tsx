@@ -101,8 +101,7 @@ export default function Header() {
         </NavbarItem>
         <NavbarItem>
           <Link
-            href="http://art-schumacher.infinityfreeapp.com/cvpdf"
-            target="_blank"
+            href="http://art-dev-backend-production.up.railway.app/cv"
             className="text-primary hover:text-primary-400"
           >
             <Newspaper />
