@@ -31,7 +31,6 @@ export default function Header() {
       onMenuOpenChange={setIsMenuOpen}
       isBlurred={false}
       className="bg-content3 shadow-lg"
-      position="static"
     >
       <NavbarContent>
         <NavbarMenuToggle

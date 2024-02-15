@@ -1,5 +1,3 @@
-"use client";
-
 import About from "@/components/About";
 import Contact from "@/components/Contact";
 import ExperienceDetails from "@/components/ExperienceDetails";
@@ -11,8 +9,6 @@ import WhatsAppButton from "@/components/WhatsAppButton";
 import WorkGrid from "@/components/WorkGrid";
 import { Job } from "@/types/job";
 import { Stack } from "@/types/stack";
-import { useTheme } from "next-themes";
-import { useEffect, useState } from "react";
 
 const experiencesList: Job[] = [
   {
@@ -37,31 +33,22 @@ const stackItems: Stack[] = [
   { name: "Git" },
 ];
 
-export default function Home() {
-  const { theme } = useTheme();
-  const [mounted, setMounted] = useState(false);
+export default async function Home() {
+  return (
+    <>
+      <Header />
+      <Hero />
+      <About />
 
-  useEffect(() => {
-    setMounted(true);
-  }, []);
+      {experiencesList.map((job, index) => {
+        return <SingleExperience key={index} job={job} />;
+      })}
 
-  if (!mounted) return null;
-  if (theme)
-    return (
-      <>
-        <Header />
-        <Hero theme={theme} />
-        <About />
-
-        {experiencesList.map((job, index) => {
-          return <SingleExperience key={index} job={job} />;
-        })}
-
-        <ExperienceDetails stackItems={stackItems} />
-        <WorkGrid />
-        <Contact />
-        <WhatsAppButton />
-        <Footer />
-      </>
-    );
+      <ExperienceDetails stackItems={stackItems} />
+      <WorkGrid />
+      <Contact />
+      <WhatsAppButton />
+      <Footer />
+    </>
+  );
 }

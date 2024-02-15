@@ -1,22 +1,32 @@
 "use client";
 
-import { Button, Link, Image, Skeleton } from "@nextui-org/react";
+import { Button, Link, Skeleton } from "@nextui-org/react";
 import { Newspaper } from "lucide-react";
-import { Suspense } from "react";
+import { useTheme } from "next-themes";
+import { Suspense, useEffect, useState } from "react";
 import { TypeAnimation } from "react-type-animation";
+import Image from "next/image";
 
-interface HeroProps {
-  theme: string;
-}
-
-export default function Hero({ theme }: HeroProps) {
+export default function Hero() {
   const CURSOR_CLASS_NAME = "custom-type-animation-cursor";
+  const { theme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) {
+    return (
+      <Skeleton className="bg-gradient-to-br from-content3 to-content4 h-dvh" />
+    );
+  }
 
   return (
     <section className="bg-gradient-to-br from-content3 to-content4">
-      <div className="flex px-5 py-10 md:flex-row flex-col items-center justify-center xl:h-screen lg:h-screen md:h-screen">
-        <div className="lg:flex-grow max-w-screen-md md:w-1/2 lg:pr-24 flex flex-col md:items-start md:text-left md:mb-0 items-center text-center sm:pb-0 pb-28">
-          <div className="block h-56 max-w-xs">
+      <div className="flex px-5 md:flex-row flex-col items-center justify-center h-dvh">
+        <div className="lg:flex-grow max-w-screen-md md:w-1/2 lg:pr-16 flex flex-col md:items-start md:text-left items-center text-center sm:pb-0 pb-28">
+          <div className="block h-56 max-w-sm">
             <TypeAnimation
               sequence={[
                 (el) => el?.classList.add(CURSOR_CLASS_NAME),
@@ -100,24 +110,16 @@ export default function Hero({ theme }: HeroProps) {
             </Button>
           </div>
         </div>
-        <div className="overflow-hidden lg:max-w-lg lg:w-full md:w-1/2 w-3/4 order-first xl:order-last lg:order-last md:order-last py-10">
-          <Suspense
-            fallback={
-              <Skeleton className="w-full h-full bg-content3 border-4 border-content4 rounded-full shadow-md" />
-            }
-          >
-            <div className="bg-content3 border-4 border-content4 rounded-full shadow-md">
-              <Image
-                src={
-                  theme === "light" ? "/lightmode-me.gif" : "darkmode-me.gif"
-                }
-                width={500}
-                height={500}
-                alt="Memoji"
-                className="object-cover rounded-full"
-              />
-            </div>
-          </Suspense>
+        <div className="overflow-hidden lg:max-w-lg lg:w-full md:w-1/2 w-3/4 order-first xl:order-last lg:order-last md:order-last sm:py-0 py-10">
+          <div className="bg-content3 border-4 border-content4 rounded-full shadow-md">
+            <Image
+              src={theme === "light" ? "/lightmode-me.gif" : "/darkmode-me.gif"}
+              width={500}
+              height={500}
+              alt="Memoji"
+              className="object-cover rounded-full"
+            />
+          </div>
         </div>
       </div>
     </section>
