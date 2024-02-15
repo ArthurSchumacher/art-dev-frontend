@@ -1,6 +1,10 @@
 import { Button, Link } from "@nextui-org/react";
+import * as utils from "@/utils";
 
 export default function About() {
+  const myBirthday = new Date("2003-01-17");
+  const age = utils.myAge(myBirthday);
+
   return (
     <section id="about" className="px-5 py-10 mx-auto bg-content3">
       <div className="flex flex-col text-center w-full md:max-w-screen-xl max-w-screen-md mx-auto">
@@ -11,7 +15,7 @@ export default function About() {
           Sobre mim
         </h1>
         <p className="lg:w-2/3 mx-auto leading-relaxed text-base text-content2">
-          Tenho 20 anos de idade, com habilidades comprovadas em programação.
+          Tenho {age} anos de idade, com habilidades comprovadas em programação.
           Sou autodidata e fluente em inglês, o que me permite aprender
           rapidamente novos conceitos e tecnologias.
         </p>
