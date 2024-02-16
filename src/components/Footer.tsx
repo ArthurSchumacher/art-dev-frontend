@@ -1,3 +1,4 @@
+import paths from "@/paths";
 import { Link } from "@nextui-org/react";
 import { Github, Instagram, Linkedin } from "lucide-react";
 
@@ -11,7 +12,7 @@ export default function Footer() {
         <p className="text-sm sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-content2 sm:py-2 sm:mt-0 mt-4">
           © 2024 Arthur Schumacher —
           <Link
-            href="https://www.instagram.com/imarthur_"
+            href={paths.instagram()}
             className="text-content2 ml-1 font-extralight"
             rel="noopener noreferrer"
             target="_blank"
@@ -24,21 +25,21 @@ export default function Footer() {
           className="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start"
         >
           <Link
-            href="https://www.linkedin.com/in/arthur-schumacher/"
+            href={paths.linkedin()}
             target="_blank"
             className="ml-3 text-primary hover:text-primary-400"
           >
             <Linkedin />
           </Link>
           <Link
-            href="https://www.instagram.com/imarthur_"
+            href={paths.instagram()}
             target="_blank"
             className="ml-3 text-primary hover:text-primary-400"
           >
             <Instagram />
           </Link>
           <Link
-            href="https://github.com/ArthurSchumacher"
+            href={paths.github()}
             target="_blank"
             className="ml-3 text-primary hover:text-primary-400"
           >

@@ -1,10 +1,8 @@
 import About from "@/components/About";
 import Contact from "@/components/Contact";
 import ExperienceDetails from "@/components/ExperienceDetails";
-import Footer from "@/components/Footer";
-import Header from "@/components/Header";
+import Experiences from "@/components/Experiences";
 import Hero from "@/components/Hero";
-import SingleExperience from "@/components/SingleExperience";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import WorkGrid from "@/components/WorkGrid";
 import { Job } from "@/types/job";
@@ -38,21 +36,13 @@ const stackItems: Stack[] = [
 export default async function Home() {
   return (
     <>
-      <Header />
       <Hero />
       <About />
-
-      <div id="experience">
-        {experiencesList.map((job, index) => {
-          return <SingleExperience key={index} job={job} />;
-        })}
-        <ExperienceDetails stackItems={stackItems} />
-      </div>
-
+      <Experiences experiencesList={experiencesList} />
+      <ExperienceDetails stackItems={stackItems} />
       <WorkGrid />
       <Contact />
       <WhatsAppButton />
-      <Footer />
     </>
   );
 }

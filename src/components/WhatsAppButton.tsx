@@ -1,10 +1,11 @@
+import paths from "@/paths";
 import { Link } from "@nextui-org/react";
 import React from "react";
 
 export default function WhatsAppButton() {
   return (
     <Link
-      href="https://api.whatsapp.com/send?phone=5567991794242&text=Ol%C3%A1,%20gostaria%20de%20saber%20mais%20sobre%20seu%20trabalho."
+      href={paths.whatsApp()}
       target="_blank"
       className="bg-lime-400 hover:bg-mid-night-blue hover:border hover:border-lime-400 p-2 rounded-full shadow-md fixed z-10 bottom-6 right-6 sm:bottom-20 sm:right-20"
     >

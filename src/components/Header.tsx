@@ -13,6 +13,7 @@ import {
 import { Github, Linkedin, Newspaper } from "lucide-react";
 import React, { useState } from "react";
 import { ThemeSwitcher } from "./ThemeSwitcher";
+import paths from "@/paths";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -82,7 +83,7 @@ export default function Header() {
       <NavbarContent justify="end">
         <NavbarItem>
           <Link
-            href="https://www.linkedin.com/in/arthur-schumacher/"
+            href={paths.linkedin()}
             target="_blank"
             className="text-primary hover:text-primary-400"
           >
@@ -91,7 +92,7 @@ export default function Header() {
         </NavbarItem>
         <NavbarItem>
           <Link
-            href="https://github.com/ArthurSchumacher"
+            href={paths.github()}
             target="_blank"
             className="text-primary hover:text-primary-400"
           >
@@ -100,7 +101,7 @@ export default function Header() {
         </NavbarItem>
         <NavbarItem>
           <Link
-            href="http://art-dev-backend-production.up.railway.app/cv"
+            href={paths.curriculum()}
             className="text-primary hover:text-primary-400"
           >
             <Newspaper />

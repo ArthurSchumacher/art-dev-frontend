@@ -3,6 +3,8 @@ import "./globals.css";
 import { Providers } from "./providers";
 import { Poppins } from "next/font/google";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -14,7 +16,7 @@ export const metadata: Metadata = {
   description: "Meu portifólio em TypeScript.",
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
@@ -22,7 +24,12 @@ export default function RootLayout({
   return (
     <html lang="pt-br" suppressHydrationWarning={true}>
       <body className={`${poppins.className}`}>
-        <Providers>{children}</Providers>
+        <Providers>
+          <Header />
+          {children}
+          <Footer />
+        </Providers>
+
         <SpeedInsights />
       </body>
     </html>

@@ -6,6 +6,7 @@ import { useTheme } from "next-themes";
 import { Suspense, useEffect, useState } from "react";
 import { TypeAnimation } from "react-type-animation";
 import Image from "next/image";
+import paths from "@/paths";
 
 export default function Hero() {
   const CURSOR_CLASS_NAME = "custom-type-animation-cursor";
@@ -97,7 +98,7 @@ export default function Hero() {
               </Button>
               <Button
                 as={Link}
-                href="http://art-schumacher.infinityfreeapp.com/cvpdf"
+                href={paths.curriculum()}
                 target="_blank"
                 size="lg"
                 radius="sm"

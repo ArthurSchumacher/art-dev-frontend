@@ -1,3 +1,4 @@
+import paths from "@/paths";
 import { Stack } from "@/types/stack";
 import { Link } from "@nextui-org/react";
 import { ArrowRightCircle } from "lucide-react";
@@ -22,7 +23,7 @@ export default function ExperienceDetails({
             companheiros, além disso sou extremamente eficiente no meu trabalho.
           </p>
           <Link
-            href="http://art-dev-backend-production.up.railway.app/cv"
+            href={paths.curriculum()}
             className="text-primary inline-flex items-center mt-4"
           >
             Curriculum vitæ
