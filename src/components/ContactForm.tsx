@@ -33,7 +33,7 @@ export default function ContactForm() {
         text: data.message,
       };
 
-      await actions.sendEmail(email);
+      await actions.sendMail(email);
     } catch (error) {
       setError("root", { message: "Falha ao enviar e-mail!" });
     }
