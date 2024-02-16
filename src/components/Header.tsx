@@ -21,7 +21,7 @@ export default function Header() {
   const menuItems = [
     { title: "Sobre", href: "#about" },
     { title: "Experiência", href: "#experience" },
-    { title: "Trabalho", href: "#work" },
+    { title: "Trabalhos", href: "#work" },
     { title: "Contato", href: "#about" },
   ];
 
@@ -67,7 +67,7 @@ export default function Header() {
             href={"#work"}
             className="text-foreground hover:border-b hover:border-b-primary"
           >
-            Trabalho
+            Trabalhos
           </Link>
         </NavbarItem>
         <NavbarItem>
