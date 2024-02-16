@@ -102,6 +102,7 @@ export default function Header() {
         <NavbarItem>
           <Link
             href={paths.curriculum()}
+            target="_blank"
             className="text-primary hover:text-primary-400"
           >
             <Newspaper />
