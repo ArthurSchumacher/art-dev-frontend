@@ -55,11 +55,6 @@ export default function Hero() {
                 4000,
                 (el) => el?.classList.add(CURSOR_CLASS_NAME),
                 1000,
-                "Eu construo coisas para a internet.",
-                (el) => el?.classList.remove(CURSOR_CLASS_NAME),
-                15000,
-                (el) => el?.classList.add(CURSOR_CLASS_NAME),
-                1000,
                 "Eu construo sites para a internet.",
                 (el) => el?.classList.remove(CURSOR_CLASS_NAME),
                 15000,
@@ -84,6 +79,7 @@ export default function Hero() {
               wrapper="h1"
               cursor={false}
               className="leading-relaxed text-justify text-content2"
+              speed={75}
             />
             <div className="flex justify-center gap-2 mt-4">
               <Button
