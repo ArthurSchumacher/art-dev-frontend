@@ -25,10 +25,15 @@ const config: Config = {
             content3: "#d4d4d4",
             content4: "#e5e5e5",
             primary: {
+              300: "#bd570f",
               400: "#fb923c",
               500: "#f97316",
               600: "#ea580c",
               DEFAULT: "#f97316",
+            },
+            secondary: {
+              300: "#b5b257",
+              DEFAULT: "#fffb7d",
             },
           },
         },

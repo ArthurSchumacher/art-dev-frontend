@@ -1,4 +1,5 @@
 import ContactForm from "./ContactForm";
+import Container from "./Container";
 
 export default function Contact() {
   return (
@@ -14,9 +15,11 @@ export default function Contact() {
           style={{ filter: "grayscale(0.7)contrast(1.2)opacity(0.6)" }}
         ></iframe>
       </div>
-      <div className="px-14 py-24 mx-auto flex">
-        <ContactForm />
-      </div>
+      <Container>
+        <div className="sm:py-16 py-8">
+          <ContactForm />
+        </div>
+      </Container>
     </section>
   );
 }

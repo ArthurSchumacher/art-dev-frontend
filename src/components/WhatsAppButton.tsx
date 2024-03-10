@@ -11,7 +11,7 @@ export default function WhatsAppButton() {
       color="primary"
       size="lg"
       isIconOnly
-      className="bg-primary border border-content4 hover:border hover:border-content4 p-1 rounded-full shadow-lg fixed z-10 bottom-6 right-6 sm:bottom-20 sm:right-20"
+      className="bg-lime-500 border border-content4 hover:border hover:border-content4 p-1 rounded-full shadow-lg fixed z-10 bottom-6 right-6 sm:bottom-20 sm:right-20 scale-125 transition-all hover:scale-150"
     >
       <svg
         viewBox="0 0 32 32"

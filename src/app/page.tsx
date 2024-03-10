@@ -3,6 +3,8 @@ import Contact from "@/components/Contact";
 import ExperienceDetails from "@/components/ExperienceDetails";
 import Experiences from "@/components/Experiences";
 import Hero from "@/components/Hero";
+import HowItWorks from "@/components/HowItWorks";
+import Transition from "@/components/Transition";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import WorkGrid from "@/components/WorkGrid";
 import { Job } from "@/types/job";
@@ -37,6 +39,8 @@ export default async function Home() {
   return (
     <>
       <Hero />
+      <HowItWorks />
+      <Transition />
       <About />
       <Experiences experiencesList={experiencesList} />
       <ExperienceDetails stackItems={stackItems} />
