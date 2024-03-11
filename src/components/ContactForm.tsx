@@ -7,6 +7,7 @@ import { SubmitHandler, useForm } from "react-hook-form";
 import { z } from "zod";
 import * as actions from "@/actions";
 import toast from "react-hot-toast";
+import { useRouter } from "next/navigation";
 
 const sendEmailSchema = z.object({
   email: z.string().email({ message: "Insira um e-mail válido" }),
@@ -20,11 +21,12 @@ export default function ContactForm() {
   const {
     register,
     handleSubmit,
-    setError,
     formState: { errors, isSubmitting },
   } = useForm<SendEmailFormFields>({
     resolver: zodResolver(sendEmailSchema),
   });
+
+  const router = useRouter();
 
   const onSubmit: SubmitHandler<SendEmailFormFields> = async (data) => {
     try {
@@ -35,6 +37,7 @@ export default function ContactForm() {
       };
 
       await actions.sendMail(email);
+      router.refresh();
       toast.success("Sucesso ao enviar mensagem.");
     } catch (error) {
       toast.error("Falha ao enviar mensagem.");
