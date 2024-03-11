@@ -33,8 +33,11 @@ export default async function RootLayout({
 
         <Toaster
           toastOptions={{
-            className: "bg-content3 text-content1",
             duration: 5000,
+            style: {
+              background: "#404040",
+              color: "#fafafa",
+            },
           }}
         />
         <SpeedInsights />

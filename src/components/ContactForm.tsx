@@ -26,8 +26,6 @@ export default function ContactForm() {
     resolver: zodResolver(sendEmailSchema),
   });
 
-  const router = useRouter();
-
   const onSubmit: SubmitHandler<SendEmailFormFields> = async (data) => {
     try {
       const email: SendEmailDto = {
@@ -37,7 +35,6 @@ export default function ContactForm() {
       };
 
       await actions.sendMail(email);
-      router.refresh();
       toast.success("Sucesso ao enviar mensagem.");
     } catch (error) {
       toast.error("Falha ao enviar mensagem.");
