@@ -6,6 +6,7 @@ import { Button, Input, Textarea } from "@nextui-org/react";
 import { SubmitHandler, useForm } from "react-hook-form";
 import { z } from "zod";
 import * as actions from "@/actions";
+import toast from "react-hot-toast";
 
 const sendEmailSchema = z.object({
   email: z.string().email({ message: "Insira um e-mail válido" }),
@@ -34,8 +35,9 @@ export default function ContactForm() {
       };
 
       await actions.sendMail(email);
+      toast.success("Sucesso ao enviar mensagem.");
     } catch (error) {
-      setError("root", { message: "Falha ao enviar e-mail!" });
+      toast.error("Falha ao enviar mensagem.");
     }
   };
 

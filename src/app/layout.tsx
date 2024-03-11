@@ -5,6 +5,7 @@ import { Poppins } from "next/font/google";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { Toaster } from "react-hot-toast";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -30,6 +31,12 @@ export default async function RootLayout({
           <Footer />
         </Providers>
 
+        <Toaster
+          toastOptions={{
+            className: "bg-content3 text-content1",
+            duration: 5000,
+          }}
+        />
         <SpeedInsights />
       </body>
     </html>
