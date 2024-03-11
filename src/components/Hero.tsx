@@ -50,7 +50,7 @@ export default function Hero() {
         <section className="bg-gradient-to-br from-content3 to-content4 rounded-b-3xl">
           <div className="glass rounded-b-3xl shadow-lg">
             <Container>
-              <div className="grid grid-cols-3 items-center h-dvh">
+              <div className="grid grid-cols-3 items-center h-screen">
                 <div className="sm:col-span-2 col-span-3 max-w-xl md:text-left text-center sm:mt-0 -mt-32">
                   <TypeAnimation
                     style={{
@@ -125,6 +125,7 @@ export default function Hero() {
                       as={Link}
                       variant="solid"
                       color="primary"
+                      className="border-none"
                     >
                       Contato
                     </Button>
