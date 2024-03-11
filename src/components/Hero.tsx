@@ -50,19 +50,26 @@ export default function Hero() {
         <section className="bg-gradient-to-br from-content3 to-content4 rounded-b-3xl">
           <div className="glass rounded-b-3xl shadow-lg">
             <Container>
-              <div className="flex md:flex-row flex-col items-center sm:justify-center justify-start h-dvh gap-10">
-                <div className="lg:flex-grow md:w-1/2 flex flex-col md:items-start md:text-left items-center text-center sm:pb-0 pb-16">
+              <div className="grid grid-cols-3 items-center h-dvh">
+                <div className="sm:col-span-2 col-span-3 max-w-xl md:text-left text-center sm:mt-0 -mt-32">
                   <TypeAnimation
+                    style={{
+                      height: "23px",
+                      display: "block",
+                    }}
                     sequence={[
                       (el) => el?.classList.add(CURSOR_CLASS_NAME),
                       "Oi meu nome é",
                       (el) => el?.classList.remove(CURSOR_CLASS_NAME),
                     ]}
-                    wrapper="p"
                     cursor={false}
                     className="sm:text-base text-light text-content2"
                   />
                   <TypeAnimation
+                    style={{
+                      height: "36px",
+                      display: "block",
+                    }}
                     sequence={[
                       1500,
                       (el) => el?.classList.add(CURSOR_CLASS_NAME),
@@ -70,11 +77,14 @@ export default function Hero() {
                       "Arthur Schumacher",
                       (el) => el?.classList.remove(CURSOR_CLASS_NAME),
                     ]}
-                    wrapper="h1"
                     cursor={false}
                     className="sm:text-2xl text-3xl font-medium text-content1"
                   />
                   <TypeAnimation
+                    style={{
+                      height: "20px",
+                      display: "block",
+                    }}
                     sequence={[
                       4000,
                       (el) => el?.classList.add(CURSOR_CLASS_NAME),
@@ -87,12 +97,15 @@ export default function Hero() {
                       "Eu construo sistemas para a internet.",
                       (el) => el?.classList.remove(CURSOR_CLASS_NAME),
                     ]}
-                    wrapper="h1"
                     cursor={false}
                     repeat={Infinity}
-                    className="mb-4 font-normal text-content2"
+                    className="mb-4 sm:text-base text-sm text-content2"
                   />
                   <TypeAnimation
+                    style={{
+                      height: "104px",
+                      display: "block",
+                    }}
                     sequence={[
                       7500,
                       (el) => el?.classList.add(CURSOR_CLASS_NAME),
@@ -100,12 +113,11 @@ export default function Hero() {
                       "Eu sou um engenheiro de software especializado em criar a melhor solução para digitalizar o seu trabalho.", // Types 'One'
                       (el) => el?.classList.remove(CURSOR_CLASS_NAME),
                     ]}
-                    wrapper="h1"
                     cursor={false}
                     className="leading-relaxed text-justify text-content2"
                     speed={75}
                   />
-                  <div className="flex justify-center gap-2 mt-4">
+                  <div className="flex flex-row items-center sm:justify-start justify-center gap-x-4 sm:-mt-8 mt-8">
                     <Button
                       href="#contact"
                       size="lg"
@@ -131,7 +143,7 @@ export default function Hero() {
                   </div>
                 </div>
 
-                <div className="overflow-hidden lg:max-w-lg lg:w-full md:w-1/2 w-3/4 order-first xl:order-last lg:order-last md:order-last p-2 sm:py-0 py-16">
+                <div className="sm:col-span-1 col-span-3 self-center mx-auto order-first sm:order-last -my-32 overflow-hidden lg:max-w-lg lg:w-full md:w-1/2 w-3/4 p-2">
                   <div className="bg-transparent/5 border-4 border-content4 profile shadow-md">
                     <Image
                       src={
