@@ -51,7 +51,7 @@ export default function Hero() {
           <div className="glass rounded-b-3xl shadow-lg">
             <Container>
               <div className="grid grid-cols-2 h-screen gap-8">
-                <div className="lg:col-span-1 col-span-2 max-w-xl lg:self-center lg:text-left text-center md:mx-0 sm:mx-auto items-center w-full md:mt-0 mt-16">
+                <div className="lg:col-span-1 col-span-2 max-w-xl lg:self-center lg:text-left text-center lg:mx-0 md:mx-auto sm:mx-auto items-center w-full md:mt-0 mt-16">
                   <TypeAnimation
                     style={{
                       height: "23px",
