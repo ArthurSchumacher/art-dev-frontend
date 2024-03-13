@@ -49,7 +49,7 @@ export default function Header() {
         <NavbarItem>
           <Link
             href={"#about"}
-            className="text-foreground hover:border-b hover:border-b-primary"
+            className="text-foreground border-b border-transparent hover:border-b hover:border-b-primary"
           >
             Sobre
           </Link>
@@ -57,7 +57,7 @@ export default function Header() {
         <NavbarItem>
           <Link
             href={"#experience"}
-            className="text-foreground hover:border-b hover:border-b-primary"
+            className="text-foreground border-b border-transparent hover:border-b hover:border-b-primary"
           >
             Experiência
           </Link>
@@ -65,7 +65,7 @@ export default function Header() {
         <NavbarItem>
           <Link
             href={"#work"}
-            className="text-foreground hover:border-b hover:border-b-primary"
+            className="text-foreground border-b border-transparent hover:border-b hover:border-b-primary"
           >
             Trabalhos
           </Link>
@@ -73,7 +73,7 @@ export default function Header() {
         <NavbarItem>
           <Link
             href={"#contact"}
-            className="text-foreground hover:border-b hover:border-b-primary"
+            className="text-foreground border-b border-transparent hover:border-b hover:border-b-primary"
           >
             Contato
           </Link>
