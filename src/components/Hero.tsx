@@ -51,7 +51,7 @@ export default function Hero() {
           <div className="glass rounded-b-3xl shadow-lg">
             <Container>
               <div className="grid grid-cols-3 items-center h-screen">
-                <div className="sm:col-span-2 col-span-3 max-w-xl md:text-left text-center sm:mt-0 -mt-32">
+                <div className="lg:col-span-2 col-span-3 max-w-xl lg:text-left text-center sm:mx-auto lg:mt-0 sm:-mt-64 -mt-32">
                   <TypeAnimation
                     style={{
                       height: "23px",
@@ -114,10 +114,10 @@ export default function Hero() {
                       (el) => el?.classList.remove(CURSOR_CLASS_NAME),
                     ]}
                     cursor={false}
-                    className="leading-relaxed text-justify text-content2"
+                    className="leading-relaxed lg:text-justify sm:text-center text-justify text-content2"
                     speed={75}
                   />
-                  <div className="flex flex-row items-center sm:justify-start justify-center gap-x-4 sm:-mt-8 mt-8">
+                  <div className="flex flex-row items-center lg:justify-start justify-center gap-x-4 lg:-mt-4 sm:-mt-8 mt-8">
                     <Button
                       href="#contact"
                       size="lg"
@@ -144,7 +144,7 @@ export default function Hero() {
                   </div>
                 </div>
 
-                <div className="sm:col-span-1 col-span-3 self-center mx-auto order-first sm:order-last -my-32 overflow-hidden lg:max-w-lg lg:w-full md:w-1/2 w-3/4 p-2">
+                <div className="lg:col-span-1 col-span-3 self-center mx-auto order-first lg:order-last -my-32 overflow-hidden lg:max-w-lg lg:w-full md:w-1/2 w-3/4 p-2">
                   <div className="bg-transparent/5 border-4 border-content4 profile shadow-md">
                     <Image
                       src={
