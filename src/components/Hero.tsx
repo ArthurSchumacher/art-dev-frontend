@@ -51,7 +51,7 @@ export default function Hero() {
           <div className="glass rounded-b-3xl shadow-lg">
             <Container>
               <div className="grid grid-cols-2 h-screen gap-8">
-                <div className="lg:col-span-1 col-span-2 max-w-xl lg:self-center lg:text-left text-center lg:mx-0 md:mx-auto sm:mx-auto items-center w-full md:mt-0 mt-16">
+                <div className="lg:col-span-1 col-span-2 max-w-xl lg:self-center lg:text-left text-center lg:mx-0 md:mx-auto sm:mx-auto items-center w-full">
                   <TypeAnimation
                     style={{
                       height: "23px",
@@ -144,7 +144,7 @@ export default function Hero() {
                   </div>
                 </div>
 
-                <div className="lg:col-span-1 col-span-2 self-center mx-auto order-first lg:order-last -my-32 overflow-hidden lg:max-w-lg lg:w-full md:w-1/2 w-3/4 p-2 md:pt-0 pt-16">
+                <div className="lg:col-span-1 col-span-2 self-center mx-auto order-first lg:order-last overflow-hidden lg:max-w-lg lg:w-full md:w-1/2 w-3/4 p-2 md:pt-0 pt-16 -my-16">
                   <div className="bg-transparent/5 border-4 border-content4 profile shadow-md">
                     <Image
                       src={
