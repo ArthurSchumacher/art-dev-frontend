@@ -86,7 +86,7 @@ export default function WorkGrid() {
         width={work.width}
         height={work.height}
       />
-      <div className="px-8 py-10 relative z-10 w-full h-full bg-content3 opacity-0 hover:opacity-100 cursor-pointer flex items-center justify-center flex-col">
+      <div className="px-8 py-10 relative z-10 w-full h-full bg-content4 opacity-0 hover:opacity-100 cursor-pointer flex items-center justify-center flex-col">
         <h2 className="tracking-widest text-sm font-medium text-primary mb-1">
           {work.stack}
         </h2>
